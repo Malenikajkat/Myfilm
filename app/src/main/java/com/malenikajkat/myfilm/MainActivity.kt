@@ -1,4 +1,5 @@
 package com.malenikajkat.myfilm
+<<<<<<< HEAD
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
@@ -83,5 +84,15 @@ class MainActivity : AppCompatActivity() {
             .replace(R.id.fragment_placeholder, fragment, tag)
             .addToBackStack(null)
             .commit()
+=======
+
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+
+class MainActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+>>>>>>> 67d7eda (Modil_28.9)
     }
 }
