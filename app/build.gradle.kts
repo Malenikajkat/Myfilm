@@ -1,6 +1,10 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+<<<<<<< HEAD
+=======
+    id("kotlin-android")
+>>>>>>> e8e86e0 (Modul_31.8 "End")
 
 
 }
@@ -40,6 +44,10 @@ android {
 
 dependencies {
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> e8e86e0 (Modul_31.8 "End")
     implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.10.0")
