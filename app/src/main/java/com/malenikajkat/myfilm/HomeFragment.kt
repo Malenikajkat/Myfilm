@@ -23,7 +23,10 @@ class HomeFragment : Fragment() {
         Film("My neighbor Totoro", R.drawable.totoro, "The sisters Satsuki and Mei move into the village house with their dad. One day, the girls discover that forest guardian spirits live next to them, led by their powerful and kind lord Totoro. Gradually, Totoro becomes a friend of the girls, helping them in their daily adventures."),
         Film("The Little Prince", R.drawable.prince, "The world is impossible without fantasy and adventure. At least this is what the good-natured old aviator believes, in whose neighborhood a very pedantic mother and her diligent daughter recently settled. The girl's life is subject to a strict curriculum, in which time for friends is provided only next summer. However, this carefully constructed plan bursts at the seams when a strange neighbor bursts into the girl's life with his incredible stories about the Little Prince and distant stars. All that remains is to fix the plane, and off we go! This is how the girl's big journey begins - full of dangers, magic, humor and true friendship.")
     )
+<<<<<<< HEAD
 
+=======
+>>>>>>> e8e86e0 (Modul_31.8 "End")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         retainInstance = true
