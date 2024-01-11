@@ -1,7 +1,14 @@
-package com.malenikajkat.myfilm
+package com.malenikajkat.myfilm.view
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import com.malenikajkat.myfilm.R
+import com.malenikajkat.myfilm.domain.Film
+import com.malenikajkat.myfilm.view.fragments.DetailsFragment
+import com.malenikajkat.myfilm.view.fragments.FavoritesFragment
+import com.malenikajkat.myfilm.view.fragments.HomeFragment
+import com.malenikajkat.myfilm.view.fragments.SelectionsFragment
+import com.malenikajkat.myfilm.view.fragments.WatchLaterFragment
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {

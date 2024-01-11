@@ -1,7 +1,8 @@
-package com.malenikajkat.myfilm
+package com.malenikajkat.myfilm.view.rv_viewholders
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.malenikajkat.myfilm.domain.Film
 import kotlinx.android.synthetic.main.film_item.view.*
 
 //В конструктор класс передается layout, который мы создали(film_item.xml)

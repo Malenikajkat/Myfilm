@@ -1,4 +1,4 @@
-package com.malenikajkat.myfilm
+package com.malenikajkat.myfilm.utils
 import android.app.Activity
 import android.view.View
 import android.view.ViewAnimationUtils

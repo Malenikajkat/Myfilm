@@ -1,13 +1,14 @@
-package com.malenikajkat.myfilm
+package com.malenikajkat.myfilm.view.fragments
 
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.amsdevelops.filmssearch.databinding.FragmentDetailsBinding
+import com.malenikajkat.myfilm.R
+import com.malenikajkat.myfilm.domain.Film
 import kotlinx.android.synthetic.main.fragment_details.*
 
 class DetailsFragment : Fragment() {

@@ -1,4 +1,11 @@
-package com.malenikajkat.myfilm
+package com.malenikajkat.myfilm.view.fragments
+
+import com.malenikajkat.myfilm.view.rv_adapters.FilmListRecyclerAdapter
+import com.malenikajkat.myfilm.view.MainActivity
+import com.malenikajkat.myfilm.view.rv_adapters.TopSpacingItemDecoration
+import com.malenikajkat.myfilm.domain.Film
+import com.malenikajkat.myfilm.utils.AnimationHelper
+
 mport android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -27,7 +34,7 @@ class FavoritesFragment : Fragment() {
         AnimationHelper.performFragmentCircularRevealAnimation(favorites_fragment_root, requireActivity(),2)
 
         binding.favoritesRecycler.apply {
-            filmsAdapter = FilmListRecyclerAdapter(object : FilmListRecyclerAdapter.OnItemClickListener{
+            filmsAdapter = FilmListRecyclerAdapter(object : FilmListRecyclerAdapter.OnItemClickListener {
                 override fun click(film: Film) {
                     (requireActivity() as MainActivity).launchDetailsFragment(film)
                 }

@@ -1,4 +1,4 @@
-package com.malenikajkat.myfilm
+package com.malenikajkat.myfilm.domain
 <<<<<<< HEAD
 =======
 

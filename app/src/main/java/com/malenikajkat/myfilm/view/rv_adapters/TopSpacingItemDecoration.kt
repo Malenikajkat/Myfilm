@@ -1,4 +1,4 @@
-package com.malenikajkat.myfilm
+package com.malenikajkat.myfilm.view.rv_adapters
 
 import android.content.res.Resources
 import android.graphics.Rect
