@@ -6,10 +6,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.amsdevelops.filmssearch.databinding.FragmentDetailsBinding
-import com.malenikajkat.myfilm.R
 import com.malenikajkat.myfilm.domain.Film
-import kotlinx.android.synthetic.main.fragment_details.*
+import com.malenikajkat.myfilm.R
+import com.malenikajkat.myfilm.data.ApiConstants
+import com.malenikajkat.myfilm.databinding.FragmentDetailsBinding
+import com.bumptech.glide.Glide
+
 
 class DetailsFragment : Fragment() {
     private lateinit var film: Film
