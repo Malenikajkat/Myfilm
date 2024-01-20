@@ -1,4 +1,6 @@
 package com.malenikajkat.myfilm.data
+import android.telecom.Call
+import androidx.contentpager.content.Query
 import com.malenikajkat.myfilm.data.Entity.TmdbResults
 import retrofit2.Call
 import retrofit2.http.GET
