@@ -1,5 +1,5 @@
 package com.malenikajkat.myfilm.di.modules
-import com.amsdevelops.filmssearch.data.MainRepository
+import com.malenikajkat.myfilm.data.MainRepository
 import dagger.Module
 import dagger.Provides
 import javax.inject.Singleton

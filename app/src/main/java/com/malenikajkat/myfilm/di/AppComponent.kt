@@ -1,8 +1,8 @@
 package com.malenikajkat.myfilm.di
-import com.amsdevelops.filmssearch.di.modules.DatabaseModule
-import com.amsdevelops.filmssearch.di.modules.DomainModule
-import com.amsdevelops.filmssearch.di.modules.RemoteModule
-import com.amsdevelops.filmssearch.viewmodel.HomeFragmentViewModel
+import com.malenikajkat.myfilm.di.modules.DatabaseModule
+import com.malenikajkat.myfilm.di.modules.DomainModule
+import com.malenikajkat.myfilm.di.modules.RemoteModule
+import com.malenikajkat.myfilm.di.viewmodel.HomeFragmentViewModel
 import dagger.Component
 import javax.inject.Singleton
 
@@ -16,6 +16,8 @@ import javax.inject.Singleton
     ]
 )
 interface AppComponent {
-    //метод для того, чтобы появилась внедрять зависимости в HomeFragmentViewModel
+    //метод для того, чтобы появилась возможность внедрять зависимости в HomeFragmentViewModel
     fun inject(homeFragmentViewModel: HomeFragmentViewModel)
+    //метод для того, чтобы появилась возможность внедрять зависимости в SettingsFragmentViewModel
+    fun inject(settingsFragmentViewModel: SettingsFragmentViewModel)
 }
