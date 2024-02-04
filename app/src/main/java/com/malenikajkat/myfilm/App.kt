@@ -1,8 +1,11 @@
 package com.malenikajkat.myfilm
 
 import android.app.Application
-import com.amsdevelops.filmssearch.di.AppComponent
-import com.amsdevelops.filmssearch.di.DaggerAppComponent
+import com.malenikajkat.myfilm.di.AppComponent
+import com.malenikajkat.myfilm.di.DaggerAppComponent
+import com.malenikajkat.myfilm.di.modules.DatabaseModule
+import com.malenikajkat.myfilm.di.modules.DomainModule
+import com.malenikajkat.myfilm.di.modules.RemoteModule
 
 class App : Application() {
     lateinit var dagger: AppComponent
@@ -11,7 +14,11 @@ class App : Application() {
         super.onCreate()
         instance = this
         //Создаем компонент
-        dagger = DaggerAppComponent.create()
+        dagger = DaggerAppComponent.builder()
+            .remoteModule(RemoteModule())
+            .databaseModule(DatabaseModule())
+            .domainModule(DomainModule(this))
+            .build()
     }
 
     companion object {
