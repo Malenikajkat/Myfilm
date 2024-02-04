@@ -1,8 +1,7 @@
 package com.malenikajkat.myfilm.di.modules
-
-import com.amsdevelops.filmssearch.BuildConfig
-import com.amsdevelops.filmssearch.data.ApiConstants
-import com.amsdevelops.filmssearch.data.TmdbApi
+import com.malenikajkat.myfilm.BuildConfig
+import com.malenikajkat.myfilm.data.ApiConstants
+import com.malenikajkat.myfilm.data.TmdbApi
 import dagger.Module
 import dagger.Provides
 import okhttp3.OkHttpClient

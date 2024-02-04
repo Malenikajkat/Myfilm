@@ -1,24 +1,25 @@
 package com.malenikajkat.myfilm.view
+
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import com.malenikajkat.myfilm.R
+import com.malenikajkat.myfilm.*
+import com.malenikajkat.myfilm.databinding.ActivityMainBinding
 import com.malenikajkat.myfilm.domain.Film
-import com.malenikajkat.myfilm.view.fragments.DetailsFragment
-import com.malenikajkat.myfilm.view.fragments.FavoritesFragment
-import com.malenikajkat.myfilm.view.fragments.HomeFragment
-import com.malenikajkat.myfilm.view.fragments.SelectionsFragment
-import com.malenikajkat.myfilm.view.fragments.WatchLaterFragment
-import kotlinx.android.synthetic.main.activity_main.*
+import com.malenikajkat.myfilm.view.fragments.*
+
 
 class MainActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        //Инициализируем объект
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        //Передаем его в метод
+        setContentView(binding.root)
 
         initNavigation()
-
         //Зупускаем фрагмент при старте
         supportFragmentManager
             .beginTransaction()
@@ -47,8 +48,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initNavigation() {
-        bottom_navigation.setOnNavigationItemSelectedListener {
-
+        binding.bottomNavigation.setOnNavigationItemSelectedListener {
             when (it.itemId) {
                 R.id.home -> {
                     val tag = "home"
@@ -74,6 +74,12 @@ class MainActivity : AppCompatActivity() {
                     val tag = "selections"
                     val fragment = checkFragmentExistence(tag)
                     changeFragment( fragment?: SelectionsFragment(), tag)
+                    true
+                }
+                R.id.settings -> {
+                    val tag = "settings"
+                    val fragment = checkFragmentExistence(tag)
+                    changeFragment( fragment?: SettingsFragment(), tag)
                     true
                 }
                 else -> false

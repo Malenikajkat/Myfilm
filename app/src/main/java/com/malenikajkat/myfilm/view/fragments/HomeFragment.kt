@@ -8,14 +8,14 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.amsdevelops.filmssearch.domain.Film
-import com.amsdevelops.filmssearch.R
-import com.amsdevelops.filmssearch.view.rv_adapters.TopSpacingItemDecoration
-import com.amsdevelops.filmssearch.databinding.FragmentHomeBinding
-import com.amsdevelops.filmssearch.utils.AnimationHelper
-import com.amsdevelops.filmssearch.view.MainActivity
-import com.amsdevelops.filmssearch.view.rv_adapters.FilmListRecyclerAdapter
-import com.amsdevelops.filmssearch.viewmodel.HomeFragmentViewModel
+import com.malenikajkat.myfilm.domain.Film
+import com.malenikajkat.myfilm.R
+import com.malenikajkat.myfilm.view.rv_adapters.TopSpacingItemDecoration
+import com.malenikajkat.myfilm.databinding.FragmentHomeBinding
+import com.malenikajkat.myfilm.utils.AnimationHelper
+import com.malenikajkat.myfilm.view.MainActivity
+import com.malenikajkat.myfilm.view.rv_adapters.FilmListRecyclerAdapter
+import com.malenikajkat.myfilm.viewmodel.HomeFragmentViewModel
 import kotlinx.android.synthetic.main.fragment_home.*
 import java.util.*
 
@@ -55,14 +55,27 @@ class HomeFragment : Fragment() {
         AnimationHelper.performFragmentCircularRevealAnimation(home_fragment_root, requireActivity(), 1)
 
         initSearchView()
-
+        initPullToRefresh()
         //находим наш RV
         initRecyckler()
         //Кладем нашу БД в RV
         viewModel.filmsListLiveData.observe(viewLifecycleOwner, Observer<List<Film>> {
             filmsDataBase = it
+            filmsAdapter.addItems(it)
         })
 
+    }
+
+    private fun initPullToRefresh() {
+        //Вешаем слушатель, чтобы вызвался pull to refresh
+        binding.pullToRefresh.setOnRefreshListener {
+            //Чистим адаптер(items нужно будет сделать паблик или создать для этого публичный метод)
+            filmsAdapter.items.clear()
+            //Делаем новый запрос фильмов на сервер
+            viewModel.getFilms()
+            //Убираем крутящиеся колечко
+            binding.pullToRefresh.isRefreshing = false
+        }
     }
 
     private fun initSearchView() {
