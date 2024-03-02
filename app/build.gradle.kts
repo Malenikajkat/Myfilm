@@ -3,21 +3,19 @@ plugins {
     id("org.jetbrains.kotlin.android")
     id("kotlin-android")
     id("kotlin-kapt")
-
-
 }
 android {
     compileSdkVersion 30
     buildToolsVersion "30.0.1"
 
     defaultConfig {
-        applicationId = "com.malenikajkat.myfilm"
-        minSdk = 21
-        targetSdk = 30
-        versionCode = 1
-        versionName = "1.0"
+        applicationId "com.malenikajkat.myfilm"
+        minSdkVersion 21
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
 
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
@@ -33,7 +31,7 @@ android {
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+                targetCompatibility JavaVersion.VERSION_1_8
     }
 
     kotlinOptions {
@@ -83,5 +81,7 @@ dependencies {
     def room_version = "2.2.6"
     implementation("androidx.room:room-runtime:$room_version")
     kapt("androidx.room:room-compiler:$room_version")
-    }
+    //Coroutines
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.2")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.2")
 }
