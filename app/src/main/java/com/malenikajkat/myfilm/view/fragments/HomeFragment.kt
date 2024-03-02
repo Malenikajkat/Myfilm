@@ -1,4 +1,5 @@
 package com.malenikajkat.myfilm.view.fragments
+
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -8,8 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.malenikajkat.myfilm.domain.Film
-import com.malenikajkat.myfilm.R
+import com.malenikajkat.myfilm.data.entity.Film
 import com.malenikajkat.myfilm.view.rv_adapters.TopSpacingItemDecoration
 import com.malenikajkat.myfilm.databinding.FragmentHomeBinding
 import com.malenikajkat.myfilm.utils.AnimationHelper

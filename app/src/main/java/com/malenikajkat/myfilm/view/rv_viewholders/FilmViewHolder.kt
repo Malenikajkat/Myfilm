@@ -1,8 +1,10 @@
 package com.malenikajkat.myfilm.view.rv_viewholders
+
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
+import com.malenikajkat.myfilm.data.ApiConstants
+import com.malenikajkat.myfilm.data.entity.Film
 import com.bumptech.glide.Glide
-import com.malenikajkat.myfilm.domain.Film
 import kotlinx.android.synthetic.main.film_item.view.*
 
 //В конструктор класс передается layout, который мы создали(film_item.xml)
@@ -11,11 +13,8 @@ class FilmViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     private val title = itemView.title
     private val poster = itemView.poster
     private val description = itemView.description
-<<<<<<< HEAD
-=======
     //Вот здесь мы находим в верстке наш прогресс бар для рейтинга
     private val ratingDonut = itemView.rating_donut
->>>>>>> e8e86e0 (Modul_31.8 "End")
 
     //В этом методе кладем данные из film в наши view
     fun bind(film: Film) {
@@ -25,17 +24,14 @@ class FilmViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         //Указываем контейнер, в которм будет "жить" наша картинка
         Glide.with(itemView)
             //Загружаем сам ресурс
-            .load(film.poster)
+            .load(ApiConstants.IMAGES_URL + "w342" + film.poster)
             //Центруем изображение
             .centerCrop()
             //Указываем ImageView, куда будем загружать изображение
             .into(poster)
         //Устанавливаем описание
         description.text = film.description
-<<<<<<< HEAD
-=======
         //Устанавливаем рэйтинг
         ratingDonut.setProgress((film.rating * 10).toInt())
->>>>>>> e8e86e0 (Modul_31.8 "End")
     }
 }

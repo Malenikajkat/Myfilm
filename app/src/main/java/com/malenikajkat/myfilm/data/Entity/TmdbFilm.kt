@@ -1,7 +1,5 @@
 package com.malenikajkat.myfilm.data.Entity
 
-
-
 import com.google.gson.annotations.SerializedName
 
 data class TmdbFilm(

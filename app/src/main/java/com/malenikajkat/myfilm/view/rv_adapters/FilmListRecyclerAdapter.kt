@@ -1,16 +1,17 @@
 package com.malenikajkat.myfilm.view.rv_adapters
+
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.amsdevelops.filmssearch.domain.Film
-import com.amsdevelops.filmssearch.view.rv_viewholders.FilmViewHolder
-import com.amsdevelops.filmssearch.R
+import com.malenikajkat.myfilm.data.entity.Film
+import com.malenikajkat.myfilm.view.rv_viewholders.FilmViewHolder
+import com.malenikajkat.myfilm.R
 import kotlinx.android.synthetic.main.film_item.view.*
 
 //в параметр передаем слушатель, чтобы мы потом могли обрабатывать нажатия из класса активити
 class FilmListRecyclerAdapter(private val clickListener: OnItemClickListener) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     //Здесь у нас хранится список элементов для RV
-    private val items = mutableListOf<Film>()
+    val items = mutableListOf<Film>()
 
     //Этот метод нужно переопределить на возврат количества елементов в списке RV
     override fun getItemCount() = items.size

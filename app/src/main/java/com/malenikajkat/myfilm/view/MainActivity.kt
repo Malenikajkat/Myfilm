@@ -1,11 +1,10 @@
 package com.malenikajkat.myfilm.view
-
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.malenikajkat.myfilm.*
 import com.malenikajkat.myfilm.databinding.ActivityMainBinding
-import com.malenikajkat.myfilm.domain.Film
+import com.malenikajkat.myfilm.data.entity.Film
 import com.malenikajkat.myfilm.view.fragments.*
 
 
