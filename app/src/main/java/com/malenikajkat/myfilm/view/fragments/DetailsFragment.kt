@@ -1,17 +1,15 @@
 package com.malenikajkat.myfilm.view.fragments
-
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.malenikajkat.myfilm.domain.Film
+import com.malenikajkat.myfilm.data.entity.Film
 import com.malenikajkat.myfilm.R
 import com.malenikajkat.myfilm.data.ApiConstants
 import com.malenikajkat.myfilm.databinding.FragmentDetailsBinding
 import com.bumptech.glide.Glide
-
 
 class DetailsFragment : Fragment() {
     private lateinit var film: Film
@@ -63,7 +61,10 @@ class DetailsFragment : Fragment() {
         //Устанавливаем заголовок
         binding.detailsToolbar.title = film.title
         //Устанавливаем картинку
-        binding.detailsPoster.setImageResource(film.poster)
+        Glide.with(this)
+            .load(ApiConstants.IMAGES_URL + "w780" + film.poster)
+            .centerCrop()
+            .into(binding.detailsPoster)
         //Устанавливаем описание
         binding.detailsDescription.text = film.description
 

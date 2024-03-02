@@ -1,11 +1,7 @@
-plugins {
-    id("com.android.application")
-    id("org.jetbrains.kotlin.android")
-    id("kotlin-android")
-    id("kotlin-kapt")
-
-
-}
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 
 
 android {
@@ -45,7 +41,7 @@ android {
 
 dependencies {
 
-    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation fileTree (dir: "libs", include: ["*.jar"])
 
     implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.appcompat:appcompat:1.2.0")
@@ -66,19 +62,24 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.3.11")
     implementation("androidx.cardview:cardview:1.0.0")
     implementation("androidx.legacy:legacy-support-v4:1.0.0")
-        //MaterialDesign
+    //MaterialDesign
     implementation("com.google.android.material:material:1.2.1")
-        //Coordinator layout
+    //Coordinator layout
     implementation("androidx.coordinatorlayout:coordinatorlayout:1.1.0")
-        //Glide
+    //Glide
     implementation("com.github.bumptech.glide:glide:4.11.0")
     annotationProcessor("com.github.bumptech.glide:compiler:4.11.0")
-        //Retrofit
+    //Retrofit
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("com.squareup.retrofit2:converter-gson:2.6.0")
     implementation("com.squareup.okhttp3:logging-interceptor:3.12.6")
-        //Dagger
+    //Dagger
     implementation("com.google.dagger:dagger:2.28")
     kapt("com.google.dagger:dagger-compiler:2.28")
+
+//Room
+    def room_version = "2.2.6"
+    implementation("androidx.room:room-runtime:$room_version")
+    kapt("androidx.room:room-compiler:$room_version")
     }
 }

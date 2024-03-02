@@ -1,7 +1,7 @@
 package com.malenikajkat.myfilm.utils
 
-import com.malenikajkat.myfilm.data.Entity.TmdbFilm
-import com.malenikajkat.myfilm.domain.Film
+import com.malenikajkat.myfilm.data.entity.TmdbFilm
+import com.malenikajkat.myfilm.data.entity.Film
 
 object Converter {
     fun convertApiListToDTOList(list: List<TmdbFilm>?): List<Film> {

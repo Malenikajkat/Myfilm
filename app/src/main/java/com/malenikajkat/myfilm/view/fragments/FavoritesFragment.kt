@@ -1,18 +1,17 @@
 package com.malenikajkat.myfilm.view.fragments
 
-import com.malenikajkat.myfilm.view.rv_adapters.FilmListRecyclerAdapter
-import com.malenikajkat.myfilm.view.MainActivity
-import com.malenikajkat.myfilm.view.rv_adapters.TopSpacingItemDecoration
-import com.malenikajkat.myfilm.domain.Film
-import com.malenikajkat.myfilm.utils.AnimationHelper
-
-mport android.os.Bundle
+import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.amsdevelops.filmssearch.databinding.FragmentFavoritesBinding
+import com.malenikajkat.myfilm.data.entity.Film
+import com.malenikajkat.myfilm.view.rv_adapters.FilmListRecyclerAdapter
+import com.malenikajkat.myfilm.view.rv_adapters.TopSpacingItemDecoration
+import com.malenikajkat.myfilm.databinding.FragmentFavoritesBinding
+import com.malenikajkat.myfilm.utils.AnimationHelper
+import com.malenikajkat.myfilm.view.MainActivity
 import kotlinx.android.synthetic.main.fragment_favorites.*
 
 class FavoritesFragment : Fragment() {
