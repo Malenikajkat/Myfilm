@@ -9,7 +9,7 @@ android {
     buildToolsVersion "30.0.1"
 
     defaultConfig {
-        applicationId "com.malenikajkat.myfilm"
+        applicationId "com.amsdevelops.filmssearch"
         minSdkVersion 21
         targetSdkVersion 30
         versionCode 1
@@ -40,28 +40,22 @@ android {
 }
 
 dependencies {
-
-    implementation fileTree (dir: "libs", include: ["*.jar"])
-
-    implementation("androidx.core:core-ktx:1.9.0")
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation("org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version")
+    implementation("androidx.core:core-ktx:1.3.1")
     implementation("androidx.appcompat:appcompat:1.2.0")
-    implementation("androidx.cardview:cardview:1.0.0")
-    implementation("com.google.android.material:material:1.10.0")
-    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
-    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.6.2")
-    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2")
-    implementation("androidx.navigation:navigation-fragment-ktx:2.7.4")
-    implementation("androidx.navigation:navigation-ui-ktx:2.7.4")
-    implementation("androidx.core:core:1.12.0")
-    implementation("androidx.contentpager:contentpager:1.0.0")
-    testImplementation("junit:junit:4.13.2")
-    androidTestImplementation("androidx.test.ext:junit:1.1.5")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
-    androidTestImplementation("androidx.test.espresso:espresso-contrib:3.3.0")
-
-    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.3.11")
+    implementation("androidx.constraintlayout:constraintlayout:2.0.1")
     implementation("androidx.cardview:cardview:1.0.0")
     implementation("androidx.legacy:legacy-support-v4:1.0.0")
+    implementation("androidx.fragment:fragment-ktx:1.2.5")
+
+    //Tests
+    testImplementation("junit:junit:4.12")
+    testImplementation("org.hamcrest:hamcrest-library:1.3")
+    androidTestImplementation("androidx.test.ext:junit:1.1.2")
+    androidTestImplementation("androidx.test.espresso:espresso-core:3.3.0")
+    androidTestImplementation("androidx.test.espresso:espresso-contrib:3.3.0")
+
     //MaterialDesign
     implementation("com.google.android.material:material:1.2.1")
     //Coordinator layout
